@@ -113,7 +113,7 @@ def show_result(msg):
         bot.send_message(msg.chat.id,'Заданной Вами номенклатуры не существует в базе. По вопросам цен на такую продукцию, просим Вас обратиться в ТОО "Amitech Astana" (Амитех Астана):/n № телефона +7 /7172/ 67 76 76')
     else:
         bot.send_message(msg.chat.id,"Цена, выбранной Вами трубы, DN"+DN+"-PN"+PN+"-SN"+SN+"-L="+L+"м. = "+str((result.value))+" тенге за п.м. трубы")
-
+        bot.send_message(msg.chat.id,'Спасибо за обращение к Боту-прайс-листу "ТОО Amitech Astana" (Амитех Астана)! Чтобы ввести новый запрос нажмите на ссылку: "/start"')
 
 @server.route('/' + token, methods=['POST'])
 def get_message():
